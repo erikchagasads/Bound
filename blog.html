@@ -1,70 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt-br" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Bound | Inteligência em Marketing Digital e Performance</title>
-    
-    <meta name="description" content="Artigos sobre Social Media, Tráfego Pago e Branding para empresas em Americana - SP. Aprenda a escalar seu negócio com a Bound.">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        :root {
-            --brand-color: #323627;
-            --brand-light: #f8fafc;
-        }
-
-        body { 
-            font-family: 'Montserrat', sans-serif; 
-            background-color: #0d110b; 
-            color: var(--brand-light);
-        }
-        
-        .noise::before {
-            content: "";
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            opacity: 0.04;
-            z-index: 50;
-            pointer-events: none;
-            background-image: url("https://grainy-gradients.vercel.app/noise.svg");
-        }
-
-        .brand-bg { background-color: var(--brand-color); }
-        .brand-text { color: var(--brand-color); }
-        
-        .glass {
-            background: rgba(50, 54, 39, 0.05);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s ease;
-        }
-        .glass:hover {
-            border-color: var(--brand-color);
-            transform: translateY(-5px);
-        }
-
-        .text-outline {
-            -webkit-text-stroke: 1px rgba(255,255,255,0.1);
-            color: transparent;
-        }
-
-        .category-tag {
-            font-size: 9px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--brand-color);
-            margin-bottom: 1rem;
-            display: block;
-        }
-    </style>
-</head>
 <body class="noise min-h-screen">
 
-    <!-- Header -->
     <nav class="sticky top-0 z-50 p-6 flex justify-between items-center max-w-7xl mx-auto backdrop-blur-md">
         <div class="text-2xl font-black tracking-tighter text-white uppercase">bound</div>
         <div class="flex items-center gap-3 flex-wrap justify-end">
@@ -75,64 +10,72 @@
         </div>
     </nav>
 
-    <!-- Hero do Blog -->
     <header class="pt-16 pb-20 px-6 text-center">
         <h1 class="text-5xl md:text-7xl font-black tracking-tighter uppercase mb-4 text-white">Insights de <br><span class="text-outline italic font-light">Performance</span></h1>
-        <p class="text-gray-500 text-xs uppercase tracking-[0.4em]">Conteúdo estratégico para quem busca escala em Americana - SP</p>
+        <p class="text-gray-500 text-xs uppercase tracking-[0.4em]">Conteúdo estratégico atualizado para o mercado de Americana - SP</p>
     </header>
 
-    <!-- Feed de Artigos -->
     <main class="max-w-7xl mx-auto px-6 pb-32">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="article-grid">
             
-            <!-- Post 1 -->
-            <article class="glass p-8 flex flex-col">
-                <span class="category-tag">Tráfego Pago</span>
-                <h2 class="text-xl font-bold uppercase tracking-tighter mb-4 text-white">Por que o tráfego pago é o acelerador de vendas em Americana?</h2>
+            <article class="glass p-8 flex flex-col group" id="post-1">
+                <span class="category-tag">Tráfego Pago • 2024</span>
+                <h2 class="text-xl font-bold uppercase tracking-tighter mb-4 text-white group-hover:text-[#323627] transition-colors">A Era do PMax e Meta Lattice: Como a IA mudou o jogo</h2>
                 <p class="text-gray-400 text-xs font-light leading-relaxed mb-8 flex-grow">
-                    Entenda como empresas locais estão utilizando anúncios segmentados para dominar o mercado regional e por que esperar pelo orgânico pode custar caro...
+                    O trabalho manual de segmentação está morrendo. Descubra como a inteligência artificial da Google e Meta agora exige criativos de alta qualidade em vez de apenas "hacks" de público...
                 </p>
+                <div class="hidden article-content text-gray-300 text-sm space-y-4 mb-8">
+                    <p>Em 2024, as plataformas de anúncios tornaram-se "caixas pretas". O algoritmo agora decide para quem mostrar seu anúncio com base na qualidade do seu criativo e na clareza da sua oferta.</p>
+                    <p>Para empresas em Americana que desejam escalar, o segredo não está mais em encontrar o "público secreto", mas em produzir vídeos e imagens que retêm a atenção nos primeiros 3 segundos.</p>
+                    <p><strong>Ação imediata:</strong> Foque em 80% criativo e 20% configuração técnica.</p>
+                </div>
                 <div class="flex justify-between items-center pt-6 border-t border-white/5">
-                    <span class="text-[10px] text-gray-600 font-bold">5 MIN READ</span>
-                    <a href="#" class="text-[10px] font-black uppercase tracking-widest brand-text hover:text-white transition">Ler Mais +</a>
+                    <span class="text-[10px] text-gray-600 font-bold uppercase">6 MIN READ</span>
+                    <button onclick="toggleArticle('post-1')" class="read-more-btn text-[10px] font-black uppercase tracking-widest brand-text hover:text-white transition">Ler Mais +</button>
                 </div>
             </article>
 
-            <!-- Post 2 -->
-            <article class="glass p-8 flex flex-col">
-                <span class="category-tag">Social Media</span>
-                <h2 class="text-xl font-bold uppercase tracking-tighter mb-4 text-white">O fim da era dos "Likes": O foco agora é autoridade e lucro</h2>
+            <article class="glass p-8 flex flex-col group" id="post-2">
+                <span class="category-tag">Social Media • Trend</span>
+                <h2 class="text-xl font-bold uppercase tracking-tighter mb-4 text-white group-hover:text-[#323627] transition-colors">TikTok e Instagram como buscadores: O fim do Google?</h2>
                 <p class="text-gray-400 text-xs font-light leading-relaxed mb-8 flex-grow">
-                    Descubra como transformar o Instagram da sua empresa em uma vitrine premium que prepara o cliente para a compra antes mesmo do primeiro clique...
+                    A geração Z não usa mais o Google para buscar "Onde comer em Americana". Eles usam as redes sociais. Sua marca está otimizada para ser encontrada?
                 </p>
+                <div class="hidden article-content text-gray-300 text-sm space-y-4 mb-8">
+                    <p>O SEO (Search Engine Optimization) agora migrou para as legendas e áudios das redes sociais. O algoritmo lê o que você escreve e o que é dito no vídeo para indexar seu conteúdo.</p>
+                    <p>Se você tem um negócio local, usar palavras-chave geográficas (como "Melhor agência de Americana") nas legendas é vital para aparecer nas buscas orgânicas do Instagram.</p>
+                    <p><strong>Dica Bound:</strong> Use legendas descritivas e palavras-chave que seu cliente realmente digitaria na busca.</p>
+                </div>
                 <div class="flex justify-between items-center pt-6 border-t border-white/5">
-                    <span class="text-[10px] text-gray-600 font-bold">4 MIN READ</span>
-                    <a href="#" class="text-[10px] font-black uppercase tracking-widest brand-text hover:text-white transition">Ler Mais +</a>
+                    <span class="text-[10px] text-gray-600 font-bold uppercase">5 MIN READ</span>
+                    <button onclick="toggleArticle('post-2')" class="read-more-btn text-[10px] font-black uppercase tracking-widest brand-text hover:text-white transition">Ler Mais +</button>
                 </div>
             </article>
 
-            <!-- Post 3 -->
-            <article class="glass p-8 flex flex-col">
-                <span class="category-tag">Branding</span>
-                <h2 class="text-xl font-bold uppercase tracking-tighter mb-4 text-white">Design Premium: O segredo das marcas High-Ticket</h2>
+            <article class="glass p-8 flex flex-col group" id="post-3">
+                <span class="category-tag">Branding • Estratégia</span>
+                <h2 class="text-xl font-bold uppercase tracking-tighter mb-4 text-white group-hover:text-[#323627] transition-colors">O Poder do Design no Valor Percebido (High-Ticket)</h2>
                 <p class="text-gray-400 text-xs font-light leading-relaxed mb-8 flex-grow">
-                    Por que a identidade visual é o fator decisivo para cobrar mais caro e atrair clientes de alto valor no mercado digital atual...
+                    Por que algumas marcas conseguem cobrar 10x mais pelo mesmo serviço? A resposta está na semiótica e na consistência visual premium.
                 </p>
+                <div class="hidden article-content text-gray-300 text-sm space-y-4 mb-8">
+                    <p>Design não é "deixar bonitinho". É uma ferramenta de filtragem de clientes. Um design amador atrai clientes que buscam preço; um design premium atrai clientes que buscam exclusividade e segurança.</p>
+                    <p>Em mercados competitivos como a região do Polo Têxtil, destacar-se visualmente é a forma mais rápida de pular a guerra de preços.</p>
+                    <p><strong>Insights:</strong> Menos é mais. Tipografias fortes e paletas de cores sóbrias comunicam autoridade imediata.</p>
+                </div>
                 <div class="flex justify-between items-center pt-6 border-t border-white/5">
-                    <span class="text-[10px] text-gray-600 font-bold">6 MIN READ</span>
-                    <a href="#" class="text-[10px] font-black uppercase tracking-widest brand-text hover:text-white transition">Ler Mais +</a>
+                    <span class="text-[10px] text-gray-600 font-bold uppercase">7 MIN READ</span>
+                    <button onclick="toggleArticle('post-3')" class="read-more-btn text-[10px] font-black uppercase tracking-widest brand-text hover:text-white transition">Ler Mais +</button>
                 </div>
             </article>
 
         </div>
 
-        <!-- Newsletter / CTA -->
         <section class="mt-32 p-12 border border-white/5 text-center relative overflow-hidden">
             <div class="relative z-10">
                 <h3 class="text-2xl font-bold uppercase tracking-tighter mb-4 italic text-white">Receba nossa inteligência semanal</h3>
                 <p class="text-gray-500 text-xs mb-8 uppercase tracking-widest">Dicas exclusivas de performance e social media</p>
                 
-                <!-- Formulário configurado para erikchagasads@gmail.com via Formspree -->
                 <form action="https://formspree.io/f/erikchagasads@gmail.com" method="POST" class="max-w-md mx-auto flex gap-2">
                     <input type="email" name="email" required placeholder="Seu melhor e-mail" class="bg-zinc-900 border border-white/10 px-4 py-3 text-xs w-full focus:outline-none focus:border-[#323627] text-white">
                     <button type="submit" class="brand-bg px-6 py-3 text-[10px] font-bold uppercase tracking-widest text-white hover:opacity-90 transition">Assinar</button>
@@ -142,17 +85,35 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="py-20 border-t border-white/5 text-center">
         <div class="max-w-7xl mx-auto px-6">
             <div class="font-black text-2xl tracking-tighter mb-4 italic uppercase text-white">bound</div>
-            <p class="text-[9px] text-gray-700 uppercase tracking-[0.4em] mb-4">Insights & Performance © 2024</p>
+            <p class="text-[9px] text-gray-700 uppercase tracking-[0.4em] mb-4">Insights & Performance © 2026</p>
             <p class="text-[8px] text-gray-800 uppercase tracking-[0.2em]">Americana - SP • Brasil</p>
         </div>
     </footer>
 
     <script>
         lucide.createIcons();
+
+        function toggleArticle(id) {
+            const article = document.getElementById(id);
+            const content = article.querySelector('.article-content');
+            const btn = article.querySelector('.read-more-btn');
+            
+            if (content.classList.contains('hidden')) {
+                // Fechar outros artigos abertos (opcional)
+                document.querySelectorAll('.article-content').forEach(el => el.classList.add('hidden'));
+                document.querySelectorAll('.read-more-btn').forEach(el => el.innerText = 'Ler Mais +');
+                
+                // Abrir o atual
+                content.classList.remove('hidden');
+                btn.innerText = 'Fechar -';
+                article.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } else {
+                content.classList.add('hidden');
+                btn.innerText = 'Ler Mais +';
+            }
+        }
     </script>
 </body>
-</html>
