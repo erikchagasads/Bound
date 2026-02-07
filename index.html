@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bound | Marketing de Elite</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --brand-color: #323627;
+            --brand-light: #f8fafc;
+        }
+
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background-color: #0d110b; 
+            color: var(--brand-light);
+            overflow-x: hidden;
+        }
+        
+        .noise::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            opacity: 0.04;
+            z-index: 50;
+            pointer-events: none;
+            background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+        }
+
+        .brand-bg {
+            background-color: var(--brand-color);
+        }
+
+        .brand-text {
+            color: var(--brand-color);
+        }
+
+        .brand-border {
+            border-color: var(--brand-color);
+        }
+
+        .space-gradient {
+            background: radial-gradient(circle at 50% -20%, #1a1d14 0%, #0d110b 80%);
+        }
+        
+        .glass {
+            background: rgba(50, 54, 39, 0.1);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(50, 54, 39, 0.2);
+        }
+
+        .hero-glow {
+            box-shadow: 0 0 40px rgba(50, 54, 39, 0.4);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        .float-anim { animation: float 6s ease-in-out infinite; }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .text-outline {
+            -webkit-text-stroke: 1px rgba(255,255,255,0.1);
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="space-gradient noise min-h-screen">
+
+    <a href="https://wa.me/5519996869932" target="_blank" 
+       class="fixed bottom-8 right-8 z-[60] brand-bg p-4 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 group">
+        <i data-lucide="message-circle" class="text-white w-7 h-7"></i>
+    </a>
+
+    <nav class="sticky top-0 z-50 p-6 flex justify-between items-center max-w-7xl mx-auto backdrop-blur-md">
+        <div class="text-2xl font-black tracking-tighter text-white flex items-center gap-2">
+            bound
+        </div>
+        <a href="https://wa.me/5519996869932" target="_blank" class="px-6 py-2 border brand-border text-sm font-bold rounded-full hover:brand-bg hover:text-white transition-all duration-300 uppercase tracking-widest">
+            Solicitar Proposta
+        </a>
+    </nav>
+
+    <section class="relative pt-16 pb-32 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col items-center text-center">
+            <div class="mb-8 float-anim">
+                <div class="text-7xl md:text-[10rem] font-black tracking-tighter text-outline select-none leading-none">
+                    BND
+                </div>
+            </div>
+            
+            <div class="relative z-10 -mt-12 md:-mt-20">
+                <span class="inline-block py-1 px-4 rounded-full border brand-border brand-text text-[10px] font-bold tracking-[0.3em] uppercase mb-8">
+                    Estratégia que posiciona.
+                </span>
+                <h1 class="text-4xl md:text-7xl font-black leading-tight mb-8 tracking-tighter uppercase">
+                    Evoluir é escolher o <br class="hidden md:block"> 
+                    <span class="brand-text">próximo nível.</span>
+                </h1>
+                <p class="text-gray-400 text-base md:text-lg max-w-3xl mx-auto mb-12 font-light leading-relaxed">
+                    BND une estratégia, design e tráfego pago em um único fluxo para transformar a vivência do seu negócio em resultados reais.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-5">
+                    <a href="https://wa.me/5519996869932" target="_blank" class="px-10 py-5 brand-bg text-white font-extrabold rounded-none hover:brightness-125 transition-all uppercase tracking-widest text-sm">
+                        QUERO ESCALAR MEUS RESULTADOS
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-24 px-6 reveal">
+        <div class="max-w-7xl mx-auto glass border-none rounded-none p-10 md:p-24 relative overflow-hidden">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-extrabold mb-8 uppercase tracking-tighter leading-tight italic">
+                        "Na Bound, números não andam sozinhos."
+                    </h2>
+                    <p class="text-gray-300 text-lg leading-relaxed mb-8 font-light">
+                        Cada decisão nasce de estratégia, cada design comunica autoridade e cada ação reforça o posicionamento da sua marca no digital.
+                    </p>
+                    <div class="h-1 w-20 brand-bg mb-8"></div>
+                    <p class="text-sm text-gray-400 uppercase tracking-widest leading-loose">
+                        Não seguimos tendências de mercado. Criamos sistemas de crescimento com tráfego pago e conteúdo que vendem.
+                    </p>
+                </div>
+                <div class="relative">
+                    <img src="socias.png" alt="Sócias Bound" class="grayscale w-full aspect-square object-cover" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80';">
+                    <div class="absolute -bottom-6 -right-6 brand-bg p-8 hidden md:block">
+                        <i data-lucide="shield-check" class="text-white w-12 h-12"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-6 text-center reveal">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="brand-text tracking-[0.5em] uppercase text-xs font-black mb-10">Resultados 2025</h3>
+            
+            <div class="grid md:grid-cols-2 gap-12 mb-20">
+                <div class="p-12 border border-white/5">
+                    <div class="text-5xl md:text-7xl font-black mb-4 tracking-tighter">+1 MILHÃO</div>
+                    <p class="text-xs uppercase tracking-[0.3em] text-gray-500 font-bold">Em visualizações por mês</p>
+                </div>
+                <div class="p-12 border border-white/5 brand-bg">
+                    <div class="text-5xl md:text-7xl font-black mb-4 tracking-tighter">50 MILHÕES</div>
+                    <p class="text-xs uppercase tracking-[0.3em] text-white/70 font-bold">Em vendas por tráfego</p>
+                </div>
+            </div>
+            
+            <p class="text-gray-500 max-w-2xl mx-auto text-sm uppercase tracking-widest leading-relaxed">
+                Nossa metodologia é focada em transformar atenção em faturamento direto.
+            </p>
+        </div>
+    </section>
+
+    <footer class="py-32 border-t border-white/5 text-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl md:text-6xl font-black mb-16 tracking-tighter uppercase">O PRÓXIMO NÍVEL <br> <span class="brand-text italic">ESTÁ A UM CLIQUE.</span></h2>
+            
+            <a href="https://wa.me/5519996869932" target="_blank"
+               class="inline-block px-12 py-6 brand-bg text-white font-black rounded-none hover:brightness-125 transition-all uppercase tracking-[0.2em] text-sm">
+                SOLICITAR PROPOSTA PERSONALIZADA
+            </a>
+            
+            <div class="mt-32 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-10">
+                <div class="font-black text-2xl tracking-tighter">bound</div>
+                
+                <a href="https://www.instagram.com/sejabound/" target="_blank" 
+                   class="flex items-center gap-4 px-8 py-4 border border-white/10 hover:brand-border transition-all group">
+                    <i data-lucide="instagram" class="w-5 h-5 brand-text"></i>
+                    <span class="font-bold uppercase tracking-widest text-[10px]">@sejabound</span>
+                </a>
+
+                <p class="text-[10px] text-gray-600 uppercase tracking-widest">© 2026 Bound. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
